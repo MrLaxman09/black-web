@@ -1,0 +1,198 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body{
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #eaeaea;
+  background: radial-gradient(1200px 700px at 20% 10%, #1a1a1a 0%, #0b0b0b 60%, #000 100%);
+  overflow-x: hidden;
+}
+
+.top{
+  text-align: center;
+  padding: 36px 16px 14px;
+}
+.top h1{
+  font-size: clamp(44px, 6vw, 80px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(255,255,255,0.06);
+}
+.sub{
+  margin-top: 8px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.wrap{
+  display: flex;
+  /* justify-content: center; */
+  padding: 24px 16px 36px;
+}
+
+/* Square box */
+.square{
+  width: min(520px, 92vw);
+  aspect-ratio: 1 / 1; /* perfect square */
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+
+  /* “dangerous” premium look */
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 18px 60px rgba(0,0,0,0.7),
+    0 0 0 1px rgba(255,255,255,0.05) inset;
+}
+
+/* Sliding background layers */
+.slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(0%);
+  opacity: 1;
+  will-change: transform, opacity;
+}
+
+/* Start with B hidden */
+.slide-b{
+  opacity: 0;
+}
+
+/* 20% black background opacity overlay requirement */
+.overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.20); /* ✅ 20% opacity */
+  z-index: 2;
+}
+
+/* Content */
+.content{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.content h2{
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Paragraph */
+.para{
+  line-height: 1.45;
+  font-size: 14px;
+  color: rgba(255,255,255,0.88);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 14px;
+  backdrop-filter: blur(6px);
+}
+
+/* Word “Black” colored differently */
+.word-black{
+  font-weight: 800;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  text-shadow: 0 0 18px rgba(255,255,255,0.08);
+}
+
+/* Small tags */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chips span{
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.85);
+}
+
+/* Controls */
+.controls{
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.controls button{
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.controls button:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.22);
+}
+.controls button:active{
+  transform: translateY(0px) scale(0.99);
+}
+
+.foot{
+  text-align: center;
+  padding: 10px 16px 24px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Smooth slide animation classes added by JS */
+.slide-in-right{ animation: inRight .9s ease forwards; }
+.slide-out-left{ animation: outLeft .9s ease forwards; }
+
+@keyframes inRight{
+  from{ transform: translateX(14%); opacity: 0; }
+  to{ transform: translateX(0%); opacity: 1; }
+}
+@keyframes outLeft{
+  from{ transform: translateX(0%); opacity: 1; }
+  to{ transform: translateX(-14%); opacity: 0; }
+}
+
+
+.bg-video{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.bg-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55); /* video dark look */
+  z-index: -2;
+}
+
+/* your page should be above */
+body{
+  position: relative;
+  z-index: 1;
+}
+.bg-video{
+  animation: slowZoom 10s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+  from{ transform: scale(1); }
+  to{ transform: scale(1.06); }
+}
