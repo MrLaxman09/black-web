@@ -10,6 +10,7 @@ body{
 .top{
   text-align: center;
   padding: 36px 16px 14px;
+  margin-top: 40px;
 }
 .top h1{
   font-size: clamp(44px, 6vw, 80px);
@@ -102,7 +103,7 @@ body{
 /* Paragraph */
 .para{
   line-height: 1.45;
-  font-size: 14px;
+  font-size: 18px;
   color: rgba(255,255,255,0.88);
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.10);
@@ -127,11 +128,11 @@ body{
   gap: 8px;
 }
 .chips span{
-  font-size: 12px;
+  font-size: 15px;
   padding: 7px 10px;
-  border-radius: 999px;
+  border-radius: 5px;
   border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(0,0,0,0.35);
+  background: rgba(34, 33, 33, 0.35);
   color: rgba(255,255,255,0.85);
 }
 
@@ -201,14 +202,14 @@ body{
   position: relative;
   z-index: 1;
 }
-/* .bg-video{
+.bg-video{
   animation: slowZoom 10s ease-in-out infinite alternate;
 }
 
 @keyframes slowZoom{
   from{ transform: scale(1); }
   to{ transform: scale(1.06); }
-} */
+}
 
 
 /* Advocate Section */
@@ -283,6 +284,12 @@ body{
   width: 60px;
   height: 30px;
   filter: invert(1) brightness(1.2);
+}
+@media (max-width: 700px){
+  .menu-img{
+    width: 45px;
+    height: 22px;
+  }
 }
 /* Backdrop */
 .drawer-backdrop{

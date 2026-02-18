@@ -5,17 +5,37 @@
 // If you don't have images, you can use online URLs (needs internet).
 
 const images = [
-  "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1520975869018-0a1b54c7b84a?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1200&q=60",
-  "https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=1200&q=60"
+  // Black Panther
+  "./images/animal.jpg",
+
+  // Night Sky
+  "./images/sky.jpg",
+
+  // Black Luxury Car
+  "./images/car.jpg",
+
+  // Black Suit / Formal
+  "./images/suit.jpg",
+
+  // Black Cat
+  "./images/cat.jpg",
+
+  // Black Rose
+  "./images/rose.jpg",
+
+  // Advocate / Court vibe
+  "./images/advocate.jpg",
+
+  // Black Fashion
+  "./images/girl.jpg",
+
+  // Dark Technology Setup
+  "./images/tech.jpg",
+
+  // Black Abstract Smoke
+  "./images/smoke.jpg"
 ];
+
 
 const slideA = document.querySelector(".slide-a");
 const slideB = document.querySelector(".slide-b");
