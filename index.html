@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Full screen background video -->
-<video class="bg-video" autoplay muted loop playsinline>
-  <source src="bg.mp4" type="video/mp4" />
-</video>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
 
-<!-- Video overlay (dark) -->
-<div class="bg-overlay"></div>
+  <!-- Video overlay (dark) -->
+  <div class="bg-overlay"></div>
+  <!-- Menu Button -->
+  <button class="menu-btn" id="openMenu" type="button" aria-label="Open menu">
+  <img class="menu-img" src="./ham.png" alt="">
+  </button>
+  <!-- Right Drawer Backdrop -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<!-- Right Drawer -->
+<aside class="drawer" id="rightDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>My Profile</h3>
+    <button class="close-btn" id="closeMenu" type="button" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="drawer-body">
+    <div class="card">
+      <h4>Introduction</h4>
+      <p>
+        Hi, I am <b>Laxman Kumar</b>. I am a BCA student and I like web development.
+        I am learning and building projects using HTML, CSS, JavaScript, React and Node.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Skills</h4>
+      <ul class="skill-list">
+        <li><span>HTML</span><div class="bar"><i style="width:92%"></i></div></li>
+        <li><span>CSS</span><div class="bar"><i style="width:85%"></i></div></li>
+        <li><span>JavaScript</span><div class="bar"><i style="width:80%"></i></div></li>
+        <li><span>React</span><div class="bar"><i style="width:70%"></i></div></li>
+        <li><span>Node/Express</span><div class="bar"><i style="width:65%"></i></div></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Links</h4>
+      <p class="links">
+        <a href="https://www.linkedin.com/in/laxman~kumar/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/MrLaxman09" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </div>
+</aside>
+
 
   <header class="top">
     <h1>Black</h1>
     <p class="sub">A clean, bold, and powerful color.</p>
   </header>
-
-  <!-- <main class="wrap">
+  <main class="wrap">
     <section class="square" aria-label="Black slider box">
-      
+
       <div class="slide slide-a"></div>
       <div class="slide slide-b"></div>
 
-     
+
       <div class="overlay"></div>
 
       <div class="content">
@@ -55,12 +100,37 @@
         </div>
       </div>
     </section>
-  </main> -->
+  </main>
+  <!-- Advocates Section -->
+<section class="advocate-section">
 
-  <!-- <footer class="foot">
+  <h2>Advocates in Black Coat</h2>
+
+  <div class="advocate-box">
+
+    <img src="https://img.freepik.com/premium-photo/black-young-professionals-are-using-their-talents-skills-experiences-make-impact-their-industries-communities-generated-by-ai_661108-4890.jpg"
+         alt="Advocate in black coat">
+
+    <div class="advocate-text">
+      <p>
+        Advocates wear a <span class="highlight">black coat</span> in court as a symbol of
+        discipline and respect for law. The <span class="highlight">black</span> color shows
+        seriousness, authority, and professionalism. It reminds people that justice should be
+        equal for everyone. The <span class="highlight">black coat</span> also represents
+        confidence and responsibility of a lawyer.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <footer class="foot">
     <small>Made with HTML • CSS • JS</small>
-  </footer> -->
+  </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

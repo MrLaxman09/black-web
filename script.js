@@ -104,3 +104,29 @@ pauseBtn.addEventListener("click", () => {
 // Init
 setInitial();
 startAuto();
+
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const drawer = document.getElementById("rightDrawer");
+const backdrop = document.getElementById("drawerBackdrop");
+
+function openDrawer(){
+  drawer.classList.add("open");
+  backdrop.classList.add("open");
+  drawer.setAttribute("aria-hidden", "false");
+}
+
+function closeDrawer(){
+  drawer.classList.remove("open");
+  backdrop.classList.remove("open");
+  drawer.setAttribute("aria-hidden", "true");
+}
+
+openMenu.addEventListener("click", openDrawer);
+closeMenu.addEventListener("click", closeDrawer);
+backdrop.addEventListener("click", closeDrawer);
+
+// ESC key to close
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closeDrawer();
+});
